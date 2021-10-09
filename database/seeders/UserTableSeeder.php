@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
@@ -39,5 +40,7 @@ class UserTableSeeder extends Seeder
             'email' => 'nova@laravel.com',
             'password' => $password,
         ]);
+
+        UserFactory::new()->times(20714)->create();
     }
 }
